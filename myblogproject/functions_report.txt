@@ -1,0 +1,26 @@
+
+🔎 Scanning all Python files for Functions & Classes...
+
+.\manage.py:  🟢 function → main
+.\blog\apps.py:  🔵 class   → BlogConfig
+.\blog\models.py:  🔵 class   → Post
+.\blog\models.py:  🟢 function → __str__
+.\blog\models.py:  🟢 function → get_absolute_url
+.\blog\views.py:  🟢 function → home
+.\blog\views.py:  🔵 class   → PostListView
+.\blog\views.py:  🔵 class   → UserPostListView
+.\blog\views.py:  🔵 class   → PostDetailView
+.\blog\views.py:  🔵 class   → PostCreateView
+.\blog\views.py:  🔵 class   → PostUpdateView
+.\blog\views.py:  🔵 class   → PostDeleteView
+.\blog\views.py:  🟢 function → about
+.\blog\views.py:  🟢 function → get_queryset
+.\blog\views.py:  🟢 function → form_valid
+.\blog\views.py:  🟢 function → form_valid
+.\blog\views.py:  🟢 function → test_func
+.\blog\views.py:  🟢 function → test_func
+.\blog\migrations\0001_initial.py:  🔵 class   → Migration
+.\users\apps.py:  🔵 class   → UsersConfig
+.\users\forms.py:  🔵 class   → UserRegisterForm
+.\users\forms.py:  🔵 class   → Meta
+.\users\views.py:  🟢 function → register

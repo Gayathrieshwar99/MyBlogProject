@@ -1,0 +1,6 @@
+asgiref==3.9.1 #Required by Django for ASGI (asynchronous server gateway interface).
+crispy-bootstrap5==2025.6 #Crispy Forms integration specifically for Bootstrap 5.#(If you are using Bootstrap 4 in your templates, you might want crispy-bootstrap4 instead.)
+Django==5.2.6 #The main Django framework your blog runs on.
+django-crispy-forms==2.4 #Handles rendering of forms in a clean, Bootstrap-compatible style.
+sqlparse==0.5.3 #Used by Django internally for SQL parsing and migrations.
+tzdata==2025.2 #Provides timezone info, used by Django for datetime handling.

@@ -1,0 +1,121 @@
+<!-- blog/templates/blog/about.html -->
+{% extends "blog/base.html" %}
+
+{% block content %}
+<div class="content-section">
+
+  <!-- Django Blog About Section -->
+  <h1>About Django Blog</h1>
+  <p>
+    Django Blog is a simple yet powerful blogging platform built using the Django framework.
+    It allows users to share ideas, stories, and knowledge in an easy and organized way.
+  </p>
+  <p>
+  With Django Blog, you can:
+    <ul>
+      <li>Create and publish your own posts</li>
+      <li>Edit or delete your content anytime</li>
+      <li>Read blogs written by other users</li>
+      <li>Connect with people who share your interests</li>
+    </ul>
+  </p>
+  <p>
+    This project is created to practice <strong>full-stack development</strong> using:
+    <ul>
+      <li>Python & Django (backend)</li>
+      <li>HTML, CSS, Bootstrap (frontend)</li>
+      <li>SQLite / PostgreSQL (database)</li>
+    </ul>
+  </p>
+  <p>
+  The goal of Django Blog is to learn, share, and grow together in the journey of web development and blogging.
+  </p>
+
+  <hr>
+
+  <!-- Login.html Explanation -->
+  <h1>Login.html Explanation</h1>
+  <pre>
+{% verbatim %}
+1. Extending the Base Template
+{% extends "blog/base.html" %}
+- Inherits the layout from base.html (navbar, footer, main container).
+
+2. Load Crispy Forms Tags
+{% load crispy_forms_tags %}
+- Loads the template tags needed for rendering forms with Crispy Forms and Bootstrap styling.
+
+3. Block Content
+{% block content %} ... {% endblock content %}
+- Everything inside this block replaces the content block in base.html.
+
+4. Content Section Wrapper
+<div class="content-section"> ... </div>
+- Wraps the login form in a container for proper spacing and styling.
+
+5. Form Tag
+<form method="POST"> {% csrf_token %} ... </form>
+- Creates a form that submits data using POST.
+- {% csrf_token %} protects against CSRF attacks.
+
+6. Fieldset & Legend
+<fieldset class="form-group">
+  <legend class="border-bottom mb-4">Log In</legend>
+  {{ form|crispy }}
+</fieldset>
+- Groups fields, shows heading, renders form with Bootstrap styling.
+
+7. Submit Button
+<div class="form-group">
+  <button class="btn btn-outline-info" type="submit">Login</button>
+</div>
+- Creates a Login button with Bootstrap styling.
+
+8. Sign Up Link
+<div class="border-top pt-3">
+  <small class="text-muted">
+    Need An Account? <a href="{% url 'register' %}">Sign Up Now</a>
+  </small>
+</div>
+- Shows a small link to register page if user doesn't have an account.
+{% endverbatim %}
+  </pre>
+
+  <hr>
+
+  <!-- Logout.html Explanation -->
+  <h1>Logout.html Explanation</h1>
+  <pre>
+{% verbatim %}
+1. Extending the Base Template
+{% extends "blog/base.html" %}
+- Uses the base layout from base.html (navbar, footer, container).
+
+2. Block Content
+{% block content %} ... {% endblock content %}
+- Everything inside this block replaces the content block in base.html.
+
+3. Logout Heading
+<h2>You have been logged out</h2>
+- Displays a message indicating the user has successfully logged out.
+
+4. Log In Again Link
+<div class="border-top pt-3">
+  <small class="text-muted">
+    <a href="{% url 'login' %}">Log In Again</a>
+  </small>
+</div>
+- Shows a link for the user to log in again, with spacing.
+
+5. Alternate Version
+{% extends "base.html" %}
+{% block content %}
+  <h2>You’ve been logged out</h2>
+  <a href="{% url 'login' %}">Login again</a>
+{% endblock %}
+- Another version with a checkmark to indicate successful logout.
+{% endverbatim %}
+  </pre>
+
+</div>
+{% endblock content %}
